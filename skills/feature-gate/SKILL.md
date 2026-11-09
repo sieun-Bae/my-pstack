@@ -27,7 +27,7 @@ Keep `.my-pstack/progress.md` at the project root. Add `.my-pstack/` to `.git/in
 
 1. **Read.** Read the whole criteria document. List every criterion with a stable id (use the document's own numbering, or number them in order).
 2. **Map.** Name the feature that just finished, in one line. Tie it to the criteria it can affect. A feature may touch many criteria. A criterion may need many features.
-3. **Run.** Run the static checks, the tests that cover the feature, and a real run of the changed behavior, per my-principles Verification. Capture the command and the key output of each run. Delegate long runs to a subagent when output is large.
+3. **Run.** Run the static checks, the tests that cover the feature, and a real run of the changed behavior, per my-principles Verification. For a Python project, run the Python gate too and report its result. Capture the command and the key output of each run. Delegate long runs to a subagent when output is large.
 4. **Judge.** For each mapped criterion write one status.
    - `met`. You ran something that shows it, and you can cite it.
    - `unmet`. You ran something that shows it fails, or the behavior is absent.
