@@ -23,7 +23,7 @@ fork it. improve it. make it yours. PRs are welcome!
 in claude code:
 
 ```bash
-/plugin marketplace add <your-github-user>/my-pstack
+/plugin marketplace add sieun-Bae/my-pstack
 /plugin install my-pstack@my-pstack
 ```
 
