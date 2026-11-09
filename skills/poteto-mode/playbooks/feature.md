@@ -2,6 +2,8 @@
 
 **You own the design. Plan, review, verify.** Delegate implementation. Stay in the lead.
 
+Follow the owner's standing rules in the **my-principles** skill (`../../my-principles/SKILL.md`). They cover Korean replies, small automatic commits on a work branch, lint plus a real run before done, and Windows as the default environment. When the user supplied an evaluation criteria document, run the **feature-gate** skill (`../../feature-gate/SKILL.md`) at each feature completion.
+
 1. `how` over the affected subsystem.
 2. `architect` for parallel design exploration.
 3. Write the throughput checkpoint as four todo items. A dimension that genuinely does not apply (single file, no fan-out) keeps its item with `n/a: <reason>` rather than being dropped:

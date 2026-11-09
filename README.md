@@ -1,3 +1,5 @@
+> **my-pstack** is a personal fork of [pstack](https://github.com/cursor/plugins/tree/main/pstack) 0.15.36 (MIT). It adds `my-principles` (standing working rules), `feature-gate` (checks each finished feature against a user-written criteria document), and an upstream merge procedure in [docs/upstream-merge.md](./docs/upstream-merge.md). Everything below is upstream text. Commands take the `my-pstack:` prefix, such as `/my-pstack:poteto-mode`. Uninstall the original `pstack` first, because both would load the same skills.
+
 # pstack
 
 i'm [poteto](https://x.com/poteto). i'm not a president or ceo, but i've worked with millions of lines of code at Meta, Netflix, and Cursor. i'm also on the react core team where i help build and maintain react compiler.
@@ -21,13 +23,13 @@ fork it. improve it. make it yours. PRs are welcome!
 in claude code:
 
 ```bash
-/plugin marketplace add cursor/plugins
-/plugin install pstack@cursor-plugins
+/plugin marketplace add <your-github-user>/my-pstack
+/plugin install my-pstack@my-pstack
 ```
 
-claude code leaves auto-update off for third-party marketplaces, so pstack stays on the version you installed. to turn it on, run `/plugin`, open the **marketplaces** tab, select `cursor-plugins`, and choose **enable auto-update**. to update once by hand, run `claude plugin update pstack@cursor-plugins`.
+claude code leaves auto-update off for third-party marketplaces, so pstack stays on the version you installed. to turn it on, run `/plugin`, open the **marketplaces** tab, select `cursor-plugins`, and choose **enable auto-update**. to update once by hand, run `claude plugin update my-pstack@my-pstack`.
 
-claude code prefixes plugin commands and agents, so `/poteto-mode` is `/pstack:poteto-mode`. the [claude code adapter](./docs/harness/claude-code.md) maps every other cursor name. in claude code, `/pstack:setup-pstack` writes your model choices to `~/.claude/rules/pstack-models.md`, and a step that needs a cursor-only feature, such as bugbot or automations, is skipped with a one-line note.
+claude code prefixes plugin commands and agents, so `/poteto-mode` is `/my-pstack:poteto-mode`. the [claude code adapter](./docs/harness/claude-code.md) maps every other cursor name. in claude code, `/my-pstack:setup-pstack` writes your model choices to `~/.claude/rules/pstack-models.md`, and a step that needs a cursor-only feature, such as bugbot or automations, is skipped with a one-line note.
 
 claude code installs a generated copy of pstack, including this readme and the guide, from [`harness/pstack/`](https://github.com/cursor/plugins/tree/main/harness/pstack) at the repository root. after you change pstack, run `node scripts/generate-pstack-harness-trees.mjs` from the repository root and commit the result. ci fails while the generated copy is out of date.
 

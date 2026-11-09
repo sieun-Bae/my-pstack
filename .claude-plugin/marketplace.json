@@ -1,0 +1,12 @@
+{
+  "name": "my-pstack",
+  "description": "Personal fork of pstack.",
+  "owner": { "name": "han.yeeun" },
+  "plugins": [
+    {
+      "name": "my-pstack",
+      "source": "./",
+      "description": "Personal fork of pstack with standing working rules and a per-feature criteria gate."
+    }
+  ]
+}

@@ -2,6 +2,8 @@
 
 Invoked at the end of every other playbook.
 
+Follow the owner's standing rules in the **my-principles** skill (`../../my-principles/SKILL.md`). They cover Korean replies, small automatic commits on a work branch, lint plus a real run before done, and Windows as the default environment. When the user supplied an evaluation criteria document, run the **feature-gate** skill (`../../feature-gate/SKILL.md`) at each feature completion.
+
 **Worktree.** Work from a git worktree off main. Subagents inherit it. Multiple `Task` calls on the same branch each get their own worktree, or `git fetch && git reset --hard origin/<branch>` between them. Dirty branch with unrelated work: patch out, fresh worktree, apply. Snarled worktree: reset from main, redo minimally.
 
 **Commits.** Commit liberally. Rebase into small, ordered commits before opening PRs. Each commit is a future PR: landable, ordered to tell the story. Amend when the fix belongs in a just-made commit. New commit when separable. Commit bodies don't restate the subject.
