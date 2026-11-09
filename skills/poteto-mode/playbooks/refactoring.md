@@ -2,7 +2,7 @@
 
 **You own the contract. The structure changes. The behavior does not.** Distinct from Feature, which adds behavior, and Bug fix, which corrects it.
 
-Follow the owner's standing rules in the **my-principles** skill (`../../my-principles/SKILL.md`). They cover Korean replies, small automatic commits on a work branch, lint plus a real run before done, and Windows as the default environment. When the user supplied an evaluation criteria document, run the **feature-gate** skill (`../../feature-gate/SKILL.md`) at each feature completion.
+Follow the owner's standing rules in the **my-principles** skill (`../../my-principles/SKILL.md`). They cover Korean replies, small automatic commits on a work branch, lint plus a real run before done, and Windows as the default environment. At the start of a task, run the **feature-gate** skill (`../../feature-gate/SKILL.md`) to locate the user's evaluation criteria document. If none exists, ask the user to write one before any plan or code. Run it again at each feature completion.
 
 If the cleanup reveals a missing feature or a real bug, split it out and ship the structural change first against the pinned contract. A redesign is allowed, but name it and route to Feature. Large or cross-cutting structural work belongs to the **figure-it-out** skill. This playbook is the focused-to-medium change.
 

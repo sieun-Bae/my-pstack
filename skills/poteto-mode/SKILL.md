@@ -12,7 +12,7 @@ In Claude Code, read [the Claude Code adapter](../../docs/harness/claude-code.md
 
 Bundled skills live at `../<name>/SKILL.md` from this file, so put this file's absolute path in every `poteto-agent` prompt.
 
-Follow the owner's standing rules in the **my-principles** skill (`../my-principles/SKILL.md`). They cover Korean replies, small automatic commits on a work branch, lint plus a real run before done, and Windows as the default environment. When the user supplied an evaluation criteria document, run the **feature-gate** skill (`../feature-gate/SKILL.md`) at each feature completion.
+Follow the owner's standing rules in the **my-principles** skill (`../my-principles/SKILL.md`). They cover Korean replies, small automatic commits on a work branch, lint plus a real run before done, and Windows as the default environment. At the start of a task, run the **feature-gate** skill (`../feature-gate/SKILL.md`) to locate the user's evaluation criteria document. If none exists, ask the user to write one before any plan or code. Run it again at each feature completion.
 
 ## Non-negotiables
 

@@ -46,4 +46,8 @@ The default environment is Windows 11 with PowerShell and Git Bash.
 
 ## Evaluation criteria document
 
-When the user supplies an evaluation criteria document for the task, run the **feature-gate** skill at the end of every feature. The criteria document is the definition of done for the work.
+Every task starts with an evaluation criteria document. It is the definition of done and the basis for tests.
+
+1. **At the start of a task**, before planning or writing code, locate the document with the **feature-gate** skill's Locate step.
+2. **If none exists**, stop and ask the user to write one first. Ask in Korean with the question tool. Offer three options: the user gives a path to an existing document, the user writes it now, or the two of you draft it together from the task description. Do not start implementation until a document exists or the user explicitly waives it in plain words. Record a waiver in the progress file and run feature-gate without a document in lightweight mode.
+3. **At the end of every feature**, run the **feature-gate** skill.

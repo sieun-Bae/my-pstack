@@ -2,7 +2,7 @@
 
 **You own this task. Plan, review, verify.** Delegate investigation and the fix to subagents, stay in the lead. Pick each subagent's reasoning level and fast or standard speed for the job, per the Subagents section.
 
-Follow the owner's standing rules in the **my-principles** skill (`../../my-principles/SKILL.md`). They cover Korean replies, small automatic commits on a work branch, lint plus a real run before done, and Windows as the default environment. When the user supplied an evaluation criteria document, run the **feature-gate** skill (`../../feature-gate/SKILL.md`) at each feature completion.
+Follow the owner's standing rules in the **my-principles** skill (`../../my-principles/SKILL.md`). They cover Korean replies, small automatic commits on a work branch, lint plus a real run before done, and Windows as the default environment. At the start of a task, run the **feature-gate** skill (`../../feature-gate/SKILL.md`) to locate the user's evaluation criteria document. If none exists, ask the user to write one before any plan or code. Run it again at each feature completion.
 
 Be scientific. Every shipped line traces to runtime evidence. Belt-and-suspenders that "might help" is a hypothesis, not a fix. It does not ship. When evidence refutes a hypothesis, revert what it motivated. The smallest change the evidence justifies ships, nothing more.
 

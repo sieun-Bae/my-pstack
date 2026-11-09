@@ -1,6 +1,6 @@
 ---
 name: feature-gate
-description: Checks finished work against the user's evaluation criteria document at the end of each feature. Maps the feature to criteria, runs tests and a real run, reports met, unmet, and unknown per criterion, and decides whether to continue. Use at every feature completion when the user supplied a criteria document, or when asked to check progress against the criteria.
+description: Owns the user's evaluation criteria document for a task. At the start, asks the user to write one if none exists. At the end of each feature, checks the work against it, runs tests and a real run, reports met, unmet, and unknown per criterion, and decides whether to continue. Use at task start and at every feature completion, or when asked to check progress against the criteria.
 disable-model-invocation: true
 icon: check-circle
 color: blue
@@ -15,8 +15,9 @@ Read [my-principles](../my-principles/SKILL.md) first. Its Verification and Comm
 ## Locate the document
 
 1. Use the path the user gave. If none, look at the project root for `CRITERIA.md`, `GOAL.md`, `EVAL.md`, or `docs/criteria.md`, and for a path named in `CLAUDE.md`.
-2. If you find several candidates or none, ask the user once and record the answer in the progress file below so you never ask again.
-3. Never copy the document into the plugin or paraphrase it into new requirements. Read it from where it lives each time, because the user may have edited it.
+2. If you find several candidates, ask the user which one and record the answer in the progress file below so you never ask again.
+3. **If none exists, this is the start-of-task gate.** Stop before any plan or code and ask the user to write the criteria document first. Use the question tool, in Korean, with these options: give the path of an existing document, write it now, or draft it together from the task description. For the third option, interview the user for goals, per-feature acceptance checks (each with a command or a visible behavior that decides it), constraints, and out-of-scope items, then write the file at the project root as `CRITERIA.md` and ask the user to confirm it. Record the path in the progress file. Proceed only once the document exists, or the user says in plain words to continue without one. Record that waiver in the progress file and run in lightweight mode: steps 3 and 7 only, with checks taken from the task description.
+4. Never copy the document into the plugin or paraphrase it into new requirements. Read it from where it lives each time, because the user may have edited it.
 
 ## Progress file
 
@@ -42,4 +43,4 @@ Reply in Korean. Open with the feature and the one-line verdict. Then a table wi
 
 ## Cadence
 
-Run this at every feature completion. Also run it when the user asks "are we on track" or "check against the criteria". When a feature takes a long time, run a lightweight pass (steps 1, 2, 5) at natural pauses, without the full run.
+Run the Locate step at the start of every task. Run the full steps at every feature completion. Also run it when the user asks "are we on track" or "check against the criteria". When a feature takes a long time, run a lightweight pass (steps 1, 2, 5) at natural pauses, without the full run.
